@@ -1,4 +1,3 @@
-package familytree;
 
 public enum Gender {
 
