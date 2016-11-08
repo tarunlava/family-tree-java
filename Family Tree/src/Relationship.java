@@ -8,11 +8,6 @@ public class Relationship {
 	
 	static boolean isMother(Person me, Person them)
 	{
-//		if(me.getMom() == them)
-//			return true;
-//		else return false;
-		
-
 		for(int i = 0;i<me.getRelationName().size();i++)
 		{
 			if(me.getRelationName().get(i).equals(BasicRelation.MOTHER)
@@ -105,6 +100,10 @@ public class Relationship {
 		return false;
 	}
 	
+	/*------------- Begin: Extended relationships
+	 * 
+	 */
+	
 	static boolean isMomGrandFather(Person me, Person them)
 	{
 //		ArrayList<Person> possibleRelation = me.getFamilyMembers(BasicRelation.MOTHER);
@@ -149,6 +148,15 @@ public class Relationship {
 				return false;
 		return true;
 	}
+
+	
+	/*
+	 * 
+	 *Since any extended relationship can broken down to a combination of basic relation
+	 * ie aunt = mother/father's sister 
+	 * 
+	 * possible to make the next 2 methods as recursive.
+	 */
 	
 	protected static boolean isLevelTwoRelation(Person me, Person them, BasicRelation level1, BasicRelation level2)
 	{

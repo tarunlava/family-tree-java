@@ -3,11 +3,14 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
 
+/**
+ * @author Tarun
+ *<pre>
+ *This class is used to define the properties and operations a person can do
+ *</pre>
+ */
 public class Person implements java.io.Serializable {
  
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	/**may to be used in future for more accurate db? */
 	private UUID personId; 
@@ -58,38 +61,6 @@ public class Person implements java.io.Serializable {
 	public void setDOB(Date dOB) {
 		DOB = dOB;
 	}
-
-//	public Person getMom() {
-//		return mom;
-//	}
-//
-//	public void setMom(Person mom) {
-//		this.mom = mom;
-//	}
-//
-//	public Person getDad() {
-//		return dad;
-//	}
-//
-//	public void setDad(Person dad) {
-//		this.dad = dad;
-//	}
-//
-//	public ArrayList<Person> getSiblings() {
-//		return siblings;
-//	}
-//
-//	public void setSiblings(ArrayList<Person> siblings) {
-//		this.siblings = siblings;
-//	}
-//
-//	public ArrayList<Person> getSpouse() {
-//		return spouse;
-//	}
-//
-//	public void setSpouse(ArrayList<Person> spouse) {
-//		this.spouse = spouse;
-//	}
 	
 	public void printData()
 	{
@@ -138,6 +109,15 @@ public class Person implements java.io.Serializable {
 	
 	// need to do check  if the person is already in the arraylist
 	// possible for a person to have multiple relations with someone incase of inbreeding BUT not the same type
+	
+	/**
+	 * paragrapht adsf 
+	 * <p>
+	 * paragasdfasdf
+	 * 
+	 * @param newRelation
+	 * @param relationType
+	 */
 	public void addRelation(Person newRelation, BasicRelation relationType)
 	{
 		if(checkRelationLists()==0)
@@ -202,6 +182,13 @@ public class Person implements java.io.Serializable {
 		return BasicRelation.OTHER;
 	}
 	
+	/**
+	 * 
+	 * @param newRelation
+	 * @param relationType
+	 * @return true if the relationship already exists between the current person and given person
+	 * 
+	 */
 	public boolean doesRelationAlreadyExists(Person newRelation, BasicRelation relationType)
 	{
 		for(int i = 0; i < relationName.size(); i++)
@@ -215,9 +202,12 @@ public class Person implements java.io.Serializable {
 	
 	/**
 	 * checks if the relationship arraylists are the same size, for integrity 
-	 * @return 0  if valid
-	 * @return -1 if the relationName arraylist is bigger
-	 * @return 1  sif the relationPerson arraylist is bigger
+	 * 
+	 * @return 
+	 * 	0  if valid <p>
+	 * -1  if the relationName arraylist is bigger <p>
+	 *  1  if the relationPerson arraylist is bigger
+	 * 
 	 */
 	public int checkRelationLists()
 	{

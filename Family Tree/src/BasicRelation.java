@@ -1,10 +1,7 @@
 /**
- * 
- */
-
-/**
  * @author Tarun
- *
+ * 
+ * This enum contains the basic relationships that a person can have
  */
 public enum BasicRelation {
 	MOTHER,
