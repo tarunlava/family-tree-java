@@ -2,6 +2,12 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 import java.util.UUID;
 
+/**
+ * 
+ * @author Tarun
+ * @deprecated Getting data using Serialization seemed like a more viable approach
+ * 	  <p> Serialization provides easier retrieval and checking 
+ */
 public class TreeParser {
 
 	private static StringTokenizer fieldParser;
