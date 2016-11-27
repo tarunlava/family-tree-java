@@ -12,6 +12,11 @@ import java.util.spi.CurrencyNameProvider;
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
 import javax.swing.text.DateFormatter;
 
+/**
+ * This class was originally created for a basic console based UI to test the functions.
+ * Might be able to convert to this to a controller class.  
+ * 
+ */
 public class TreeProgram {
 
 	private final static int MAX_RETRIES = 10; 
